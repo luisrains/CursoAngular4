@@ -1,0 +1,12 @@
+<h3>Padre:</h3>
+<h1>{{titulo}}</h1>
+
+nombre del parque:
+<input type="text" [(ngModel)]="nombreDelParque" (keyup)="mostrarNombre()" />
+<br>Resultado: {{nombreDelParque}}
+
+
+<p>
+Hijo:
+<parques [nombre]="nombreDelParque" [metros_cuadrados]="598"></parques>
+</p>

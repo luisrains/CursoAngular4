@@ -1,5 +1,21 @@
+<h4>Utilizar jquery dentro de angular</h4>
+<button id="botonjq">Mostrar texto</button>
+<p id="textojq" class="alert alert-warning"> texto a mostrar</p>
+
+<div id="caja" style="width: 150px; height: 50px; border: 1px solid black;">Esto es una frase larga para prueba del dotdotdot</div>
+
+<simple-tiny
+  [elementId]="'descripcionTienda'"
+  (onEditorKeyup)="textoRichEditor($event)"
+  >
+</simple-tiny>
+
+<hr>
 <h3>Padre:</h3>
 <h1>{{titulo}}</h1>
+
+
+
 <hr>
 nombre del parque:
 <input type="text" [(ngModel)]="nombreDelParque" (keyup)="mostrarNombre()" />

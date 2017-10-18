@@ -9,19 +9,19 @@
 
       <ul class="nav navbar-nav">
         <li>
-          <a [routerLink]="['/home']"><span class="glyphicon glyphicon-home"></span> Inicio</a>
+          <a [routerLink]="['/home']" [routerLinkActive]="['active']"><span class="glyphicon glyphicon-home"></span> Inicio</a>
         </li>
         <li> 
-          <a [routerLink]="['/animales']"><span class="glyphicon glyphicon-star"></span> Animales</a>
+          <a [routerLink]="['/animales']" [routerLinkActive]="['active']"><span class="glyphicon glyphicon-star"></span> Animales</a>
         </li>
         <li>
-          <a [routerLink]="['/cuidadores']"><span class="glyphicon glyphicon-user"></span> Cuidadores</a>
+          <a [routerLink]="['/cuidadores']" [routerLinkActive]="['active']"><span class="glyphicon glyphicon-user"></span> Cuidadores</a>
         </li>
         <li> 
-          <a [routerLink]="['/tienda']"><span class="glyphicon glyphicon-gift"></span> Tienda</a>
+          <a [routerLink]="['/tienda']" [routerLinkActive]="['active']"><span class="glyphicon glyphicon-gift"></span> Tienda</a>
         </li>
          <li>
-          <a [routerLink]="['/contactos']"><span class="glyphicon glyphicon-comment"></span> Contacto</a>
+          <a [routerLink]="['/contactos']" [routerLinkActive]="['active']"><span class="glyphicon glyphicon-comment"></span> Contacto</a>
         </li>
         <li class="hidden"> <span *ngIf="emailContacto">Este es su email: {{emailContacto}} <button (click)="borrarEmail()">Eliminar email de contacto</button></span></li>
 

@@ -13,6 +13,8 @@ import { ContactComponent } from './components/contact/contact.component';
 import { HomeComponent } from './components/home/home.component';
 import { KeepersComponent } from './components/keepers/keepers.component';
 
+import {ModuloEmailModule} from './moduloemail/modulo-email.module';
+
 
 //aqui van los export class
 @NgModule({
@@ -26,11 +28,13 @@ import { KeepersComponent } from './components/keepers/keepers.component';
     KeepersComponent,
     SimpleTinyComponent
 
+
   ],
   imports: [
     BrowserModule,
     FormsModule,
     routing,
+    ModuloEmailModule,
   ],
   providers: [ appRoutingProviders],
   bootstrap: [AppComponent]

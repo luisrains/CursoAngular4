@@ -14,6 +14,8 @@ import { HomeComponent } from './components/home/home.component';
 import { KeepersComponent } from './components/keepers/keepers.component';
 
 import {ModuloEmailModule} from './moduloemail/modulo-email.module';
+//modulo nuevo de admin
+import {AdminModule} from './admin/admin.module';
 
 
 //aqui van los export class
@@ -27,14 +29,13 @@ import {ModuloEmailModule} from './moduloemail/modulo-email.module';
     HomeComponent,
     KeepersComponent,
     SimpleTinyComponent
-
-
   ],
   imports: [
     BrowserModule,
     FormsModule,
     routing,
     ModuloEmailModule,
+    AdminModule,
   ],
   providers: [ appRoutingProviders],
   bootstrap: [AppComponent]

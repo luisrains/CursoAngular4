@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import {routing, appRoutingProviders} from './app.routing';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 //Componentes los .ts
 import { AppComponent } from './app.component';
@@ -36,6 +37,7 @@ import {AdminModule} from './admin/admin.module';
     routing,
     ModuloEmailModule,
     AdminModule,
+    BrowserAnimationsModule,
   ],
   providers: [ appRoutingProviders],
   bootstrap: [AppComponent]

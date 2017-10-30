@@ -14,3 +14,6 @@ Pre-requisitos
 https://angular.io
 
 ver video 35
+
+//para usar el midleware
+hay que poner en cada uno de las rutas, como segundo parametro

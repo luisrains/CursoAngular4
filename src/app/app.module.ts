@@ -13,6 +13,8 @@ import { AnimalsComponent } from './components/animals/animals.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { HomeComponent } from './components/home/home.component';
 import { KeepersComponent } from './components/keepers/keepers.component';
+import { RegisterComponent } from './components/register/register.component';
+import { LoginComponent } from './components/login/login.component';
 
 import {ModuloEmailModule} from './moduloemail/modulo-email.module';
 //modulo nuevo de admin
@@ -29,7 +31,9 @@ import {AdminModule} from './admin/admin.module';
     ContactComponent,
     HomeComponent,
     KeepersComponent,
-    SimpleTinyComponent
+    SimpleTinyComponent,
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

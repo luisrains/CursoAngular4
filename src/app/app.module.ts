@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 import {routing, appRoutingProviders} from './app.routing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -20,6 +21,7 @@ import {ModuloEmailModule} from './moduloemail/modulo-email.module';
 //modulo nuevo de admin
 import {AdminModule} from './admin/admin.module';
 
+import {UserService} from './service/user.service';
 
 //aqui van los export class
 @NgModule({
@@ -42,8 +44,9 @@ import {AdminModule} from './admin/admin.module';
     ModuloEmailModule,
     AdminModule,
     BrowserAnimationsModule,
+    HttpModule,
   ],
-  providers: [ appRoutingProviders],
+  providers: [ appRoutingProviders,UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

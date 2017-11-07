@@ -13,6 +13,7 @@ import {UserService} from '../../service/user.service';
 export class RegisterComponent implements OnInit{
 	public title: String;
 	public user: User;
+	public status: string;
 
 	constructor(private _route: ActivatedRoute,	private _router: Router, private _userService: UserService)
 	{
@@ -22,11 +23,27 @@ export class RegisterComponent implements OnInit{
 
 	ngOnInit(){
 		console.log('register.component cargado!!');
-		console.log(this._userService);
+		
 	}
 
-	onSubmit(){
-		console.log(this.user);
+	onSubmit(formulario){
+		this._userService.register(this.user).subscribe(
+			response => {
+				if(response.user && response.user._id){
+					this.status = 'success';
+					this.user = new User('','','','','','ROLE_USER','');
+					formulario.reset();
+				}else{
+					this.status = 'error';
+				}
+				
+				
+			},
+			error =>{
+				this.status = 'error';
+				console.log(<any>error);
+			}
+		);
 
 	}
 }

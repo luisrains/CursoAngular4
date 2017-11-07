@@ -12,4 +12,11 @@ export class UserService{
 	constructor(private _http: Http){
 		this.url = GLOBAL.url;
 	}
+
+	register(user_to_register){
+		let params = JSON.stringify(user_to_register);
+		let headers = new Headers({'Content-Type':'application/json'});
+		return this._http.post(this.url+'register',params,{headers:headers})
+		.map(res=> res.json());
+	}
 }

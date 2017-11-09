@@ -24,6 +24,7 @@ export class LoginComponent implements OnInit{
 
 	ngOnInit(){
 		console.log('login.component cargado!!');
+		console.log(this._userService.getIdentity());
 	}
 	onSubmit(){
 		//loguear al usuario y obtener los datos
@@ -33,6 +34,7 @@ export class LoginComponent implements OnInit{
 				if(!this.identity || !this.identity._id){
 					alert('el usuario no se ha logueado correctamente')
 				}else{
+					localStorage.setItem('identity',JSON.stringify(this.identity));
 					//obtener el token
 					this._userService.singup(this.user,'true').subscribe(
 						response=>{
@@ -41,8 +43,10 @@ export class LoginComponent implements OnInit{
 							if(this.token.length <= 0){
 								alert('el token no se ha generado')
 							}else{
-								console.log(this.token)	;
+								localStorage.setItem('token',this.token);
 								this.status ='success'
+								//vamos al home
+								this._router.navigate(['/']);
 							}
 
 						},

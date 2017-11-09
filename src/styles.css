@@ -41,3 +41,7 @@
 	background: #ccc;
 	border: 1px solid red;
 }
+
+.pointer{
+	cursor: pointer;
+}

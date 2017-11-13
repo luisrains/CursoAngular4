@@ -45,3 +45,23 @@
 .pointer{
 	cursor: pointer;
 }
+
+
+/*clase para imagen*/
+
+.image_for_edit{
+	width: 60px;
+	}
+
+.avatar{
+	width: 35px;
+	height: 35px;
+	border-radius: 500px;
+	overflow: hidden;
+	margin-top: 9px;
+	margin-right: 2px;
+}
+
+.avatar img{
+	height: 55px;
+}

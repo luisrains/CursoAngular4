@@ -26,6 +26,10 @@
 			<span *ngIf="!email.valid && email.touched"> El email es obligatorio</span>
 		</p>
 
+		<div class="image_for_edit" *ngIf="user.image && user.image != 'null'">
+			<img src="{{url + 'get-image-file/'+user.image}}" >
+		</div>
+
 		<p>
 			<label>Subir avatar</label>
 			<input type="file" placeholder="subir imagen" name="image" (change)="fileChangeEvent($event)"/>

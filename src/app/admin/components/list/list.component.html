@@ -13,17 +13,38 @@
 				<td> {{animal.name}}</td>
 				<td>{{animal.year}}</td>
 				<td> 
-					<button class="btn btn-sm btn-success">
+					<a [routerLink]="['/animal',animal._id]" class="btn btn-sm btn-success">
 						<span class="glyphicon glyphicon-eye-open" aria-hidden="true"> Ver</span>
-					</button>
-					<button class="btn btn-sm btn-primary">
+					</a>
+					<a [routerLink]="['/admin-panel/editar',animal._id]" class="btn btn-sm btn-primary">
 						<span class="glyphicon glyphicon-pencil" aria-hidden="true"> Editar</span>
-					</button>
-					<button class="btn btn-sm btn-danger">
+					</a>
+					<a href="#myModal-{{animal._id}}" role="button" data-toggle="modal" class="btn btn-sm btn-danger">
 						<span class="glyphicon glyphicon-trash" aria-hidden="true"> Borrar</span>
-					</button>
+					</a>
+					<!-- Button HTML (to Trigger Modal) -->
+					<!-- Modal HTML -->
+					<div id="myModal-{{animal._id}}" class="modal fade">
+					    <div class="modal-dialog">
+					        <div class="modal-content">
+					            <div class="modal-header">
+					                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					                <h4 class="modal-title">Confirmación</h4>
+					            </div>
+					            <div class="modal-body">
+					                <p>¿Esta seguro que desea eliminar el animal?</p>
+					                <p class="text-warning"><small>Ya no se podrán recuperar los datos del animal: <strong>{{animal.name}}</strong></small></p>
+					            </div>
+					            <div class="modal-footer">
+					                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+					                <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="deleteAnimal(animal._id)">Borrar</button>
+					            </div>
+					        </div>
+					    </div>
+					</div>
+					<!-- ./ Modal HTML -->
+
 				</td>
-				
 			</tr>
 		</tbody>
 	</table>

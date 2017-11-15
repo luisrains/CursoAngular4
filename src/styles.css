@@ -65,3 +65,22 @@
 .avatar img{
 	height: 55px;
 }
+
+
+/*Detalles del animal*/
+.animal-data{
+	background: #8080802b;
+    border-radius: 20px;
+}
+
+.animal-image{
+    width: 300px;
+    border-radius: 50px;
+}
+
+.animal-head-card{
+	border-style: dotted;
+    height: 254px;
+    border-radius: 20px;
+    width: 190px;
+}

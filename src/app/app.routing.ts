@@ -10,6 +10,7 @@ import { KeepersComponent } from './components/keepers/keepers.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { UserEditComponent } from './components/user-edit/user-edit.component';
+import { AnimalDetailComponent } from './components/animal-detail/animal-detail.component';
 //parque depende de tienda
 const appRoutes: Routes = [
 		{path: '', component : HomeComponent},
@@ -22,7 +23,8 @@ const appRoutes: Routes = [
 		{path: 'login', component : LoginComponent},
 		//para cuando algo falle, el ** es para indicar eso
 		{path: 'tienda', component : TiendaComponent},
-		{path: 'mis-datos', component : UserEditComponent}
+		{path: 'mis-datos', component : UserEditComponent},
+		{path: 'animal/:id', component : AnimalDetailComponent}
 	];
 
 export const appRoutingProviders : any[] = [];

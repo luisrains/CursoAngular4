@@ -13,12 +13,16 @@ import {EditComponent} from './components/edit/edit.component';
 
 import {UserService} from '../service/user.service';
 import {AdminGuard} from '../service/admin.guard';
+
+//pipe
+import {SearchPipe} from './pipes/search.pipe';
 @NgModule({
   declarations: [
     MainComponent,
     ListComponent,
     AddComponent,
-    EditComponent
+    EditComponent,
+    SearchPipe
   ],
   imports: [
     HttpModule,

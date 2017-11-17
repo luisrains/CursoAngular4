@@ -5,11 +5,13 @@ import {Animal} from '../../../models/animal';
 import {AnimalService} from '../../../service/animal.service';
 import {UserService} from '../../../service/user.service';
 import {UploadService} from '../../../service/upload.service';
+import {fadeLateral} from '../../animation';
 
 @Component({
   selector: 'admin-list',
   templateUrl: './list.component.html',
-  providers: [AnimalService,UserService]
+  providers: [AnimalService,UserService],
+  animations: [fadeLateral]
 })
 export class ListComponent implements OnInit{
   public title : string;

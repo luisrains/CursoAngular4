@@ -15,7 +15,7 @@ export class AppComponent implements OnInit,DoCheck{
 
   constructor(
   		private _userService: UserService,
-  		private _route: ActivatedRoute,	
+  		private _route: ActivatedRoute,
   		private _router: Router
   ){
   	this.title = "NGZOO";
@@ -28,6 +28,7 @@ export class AppComponent implements OnInit,DoCheck{
 
   ngDoCheck(){
   	this.identity = this._userService.getIdentity();
+    console.log(this.identity);
   }
 
   logout(){
